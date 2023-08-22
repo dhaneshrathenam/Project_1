@@ -9,19 +9,19 @@ with st.sidebar:
     )
 
 # Bridging a connection with MongoDB  and Creating a new database(youtube)
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = pymongo.MongoClient("#mondodb_url")
 db = client.youtube
 
 # CONNECTING WITH MYSQL DATABASE
-mydb = mysql.connector.connect(host="localhost",
-                               user="root",
-                               password="Dh@nesh55",
-                               database="youtube_data"
+mydb = mysql.connector.connect(host="",#your sql connection requirement
+                               user="",
+                               password="",
+                               database=""
                                )
 mycursor = mydb.cursor(buffered=True)
 
 # BUILDING CONNECTION WITH YOUTUBE API
-api_key = "AIzaSyBKeuMqNak7lJpTU9ADuD1WTgAW6jCVL2s"
+api_key = "#write_API"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 
